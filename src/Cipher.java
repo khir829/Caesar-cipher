@@ -1,10 +1,14 @@
 
 public class Cipher {
+	public static final String alphabet = "abcdefghijklmnopqrstuvwxyz";
+
 	public static StringBuffer encrypt(String message, int shift) {
+		message = message.toLowerCase();
 		StringBuffer result = new StringBuffer();
 		for (int i = 0; i < message.length(); i++) {
-			char ch = (char) ((message.charAt(i) + shift));
-			result.append(ch);
+			int charPos = alphabet.indexOf(message.charAt(i));
+			int pos = (charPos + shift) % 26;
+			result.append(alphabet.charAt(pos));
 		}
 
 		return result;
