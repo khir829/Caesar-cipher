@@ -10,7 +10,7 @@ public class Cipher {
 				result.append(' ');
 			} else {
 				int charPos = alphabet.indexOf(message.charAt(i));
-				int pos = (charPos + shift) % 26;
+				int pos = Math.abs((charPos + shift) % 26);
 				result.append(alphabet.charAt(pos));
 			}
 		}
