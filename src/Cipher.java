@@ -2,7 +2,7 @@
 public class Cipher {
 	public static final String alphabet = "abcdefghijklmnopqrstuvwxyz";
 
-	public static StringBuffer encrypt(String message, int shift) {
+	public static StringBuffer cipher(String message, int shift) {
 		message = message.toLowerCase();
 		StringBuffer result = new StringBuffer();
 		for (int i = 0; i < message.length(); i++) {
