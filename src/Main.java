@@ -2,8 +2,9 @@
 public class Main {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		Cipher cipher = new Cipher();
 
+		System.out.println(cipher.encrypt("z", 1));
 	}
 
 }
