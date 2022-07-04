@@ -12,6 +12,22 @@ public class Main {
 		int shift = 0;
 		Scanner scan = new Scanner(System.in);
 
+		/*
+		 * The program will loop until the user decides to terminate it by entering 'No'
+		 * at the end. The program will do the following:
+		 * 
+		 * 1- The decision to encrypt or decrypt is determined by the user
+		 * 
+		 * 2- The shift value is determined by the user.
+		 * 
+		 * 3- The message to encrypted/decrypted message is determined by the user.
+		 * 
+		 * 4- The encrypted/decrypted message is output.
+		 * 
+		 * 5- The program will prompt the user to continue using the caesar cipher or
+		 * terminate the program.
+		 * 
+		 */
 		System.out.println("Welcome to the caesar cipher encrypter/decrypter");
 		do {
 			do {
@@ -49,7 +65,7 @@ public class Main {
 				char[] ch = message.toCharArray();
 				for (char c : ch) {
 					if (Character.isDigit(c)) {
-						System.out.println("No numbers allowed in caesar cipher!");
+						System.out.println("No numbers allowed in caesar cipher! ");
 						System.out.println("Enter a valid message to encrypt/decrypt: ");
 						flag = true;
 					}
